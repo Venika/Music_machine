@@ -1,9 +1,11 @@
 *, *::before, *::after {
     box-sizing:border-box;
+    
 }
 
 body{
-    background: coral;
+    font-size: large;
+    background: #8FCB9B;
     margin:0;
     min-height: 100vh;
     display: flex;
@@ -11,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 
 .piano{
     display: flex;
@@ -60,20 +63,23 @@ body{
 }
 
 
-.buttons{
+.buttons, .songLink{
     margin-bottom: 2rem;
     display: flex;
 }
 
 .btn{
     padding: 0.5rem 1rem;
-    border: none;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: white;
     font-size: 2rem;
     margin-left: 1rem;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 0.8rem;
     color: inherit;
+    margin-top: 5rem;
 }
 
 .btn:first-child{
@@ -88,7 +94,58 @@ body{
     background-color: red;
 }
 
-.btn:hover,
-.btn:focus{
-    background-color: rgb(185, 129, 129);
+.btn:hover{
+    background-color: rgb(170, 255, 58);
+}
+
+.playBtn, .saveBtn, .songLink {
+    display: none;
+}
+
+.playBtn.show,
+.saveBtn.show,
+.songLink.show {
+    display: block;
+}
+
+
+.copyright{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color:#14274e;
+    padding: 0.2rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+   
+    
+  }
+  .copyright p{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+  }
+
+.heading {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color:#14274e;
+    padding-bottom: 0rem;
+}
+
+.heading h1{
+    color: white;
+    font-size: 40px;
+}
+
+.heading h4{
+    color: white;
+    
+}
+
+.songLink{
+    margin-top: 0.5rem;
 }

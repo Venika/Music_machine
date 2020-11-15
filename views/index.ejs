@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        const currentSong = <%- JSON.stringify(locals.song) || 'undefined' %>
+    </script>
+    <script src="/script.js" defer></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
     <title>Music Machine</title>
 </head>
 <body>
-    <div class="buttons">
-        <button class="recordBtn btn">Record</button>
+    <div class="heading">
+        <h1>♬ Music Machine ♪</h1>
+        <h4>An easier way to compose music</h4>
     </div>
+        <div class="buttons">
+            <% if (locals.song == null) { %>
+                <button class="recordBtn btn">Record</button>
+                <button class="saveBtn btn">Save</button>
+            <% } else { %>
+                <a href="/" class="btn">Record New Song</a>
+            <% } %>
+            
+            <!-- if we have a song, we want to show the play btn -->
+            <button class="playBtn btn <%= locals.song !=null ? 'show' : '' %>">Play</button>
+            
+        </div>
+         <a href="#" class="btn songLink">View Song</a>
     <div class="piano">
         <div data-note="C1" class="key white C1"><h2>C</h2></div>
         <div data-note="C1s" class="key black C1s"><h2>C#</h2></div>
@@ -38,30 +56,33 @@
         <div data-note="B3" class="key white B3"><h2>B</h2></div>
     </div>
 
-    <audio id="C1" src="notes/C1.mp3"></audio>
-    <audio id="C1s" src="notes/C1s.mp3"></audio>
-    <audio id="D1" src="notes/D1.mp3"></audio>
-    <audio id="D1s" src="notes/D1s.mp3"></audio>
-    <audio id="E1" src="notes/E1.mp3"></audio>
-    <audio id="F1" src="notes/F1.mp3"></audio>
-    <audio id="F1s" src="notes/F1s.mp3"></audio>
-    <audio id="G1" src="notes/G1.mp3"></audio>
-    <audio id="G1s" src="notes/G1s.mp3"></audio>
-    <audio id="A2" src="notes/A2.mp3"></audio>
-    <audio id="A2s" src="notes/A2s.mp3"></audio>
-    <audio id="B2" src="notes/B2.mp3"></audio>
-    <audio id="C2" src="notes/C2.mp3"></audio>
-    <audio id="C2s" src="notes/C2s.mp3"></audio>
-    <audio id="D2" src="notes/D2.mp3"></audio>
-    <audio id="D2s" src="notes/D2s.mp3"></audio>
-    <audio id="E2" src="notes/E2.mp3"></audio>
-    <audio id="F2" src="notes/F2.mp3"></audio>
-    <audio id="F2s" src="notes/F2s.mp3"></audio>
-    <audio id="G2" src="notes/G2.mp3"></audio>
-    <audio id="G2s" src="notes/G2s.mp3"></audio>
-    <audio id="A3" src="notes/A3.mp3"></audio>
-    <audio id="A3s" src="notes/A3s.mp3"></audio>
-    <audio id="B3" src="notes/B3.mp3"></audio>
+    <audio id="C1" src="/notes/C1.mp3"></audio>
+    <audio id="C1s" src="/notes/C1s.mp3"></audio>
+    <audio id="D1" src="/notes/D1.mp3"></audio>
+    <audio id="D1s" src="/notes/D1s.mp3"></audio>
+    <audio id="E1" src="/notes/E1.mp3"></audio>
+    <audio id="F1" src="/notes/F1.mp3"></audio>
+    <audio id="F1s" src="/notes/F1s.mp3"></audio>
+    <audio id="G1" src="/notes/G1.mp3"></audio>
+    <audio id="G1s" src="/notes/G1s.mp3"></audio>
+    <audio id="A2" src="/notes/A2.mp3"></audio>
+    <audio id="A2s" src="/notes/A2s.mp3"></audio>
+    <audio id="B2" src="/notes/B2.mp3"></audio>
+    <audio id="C2" src="/notes/C2.mp3"></audio>
+    <audio id="C2s" src="/notes/C2s.mp3"></audio>
+    <audio id="D2" src="/notes/D2.mp3"></audio>
+    <audio id="D2s" src="/notes/D2s.mp3"></audio>
+    <audio id="E2" src="/notes/E2.mp3"></audio>
+    <audio id="F2" src="/notes/F2.mp3"></audio>
+    <audio id="F2s" src="/notes/F2s.mp3"></audio>
+    <audio id="G2" src="/notes/G2.mp3"></audio>
+    <audio id="G2s" src="/notes/G2s.mp3"></audio>
+    <audio id="A3" src="/notes/A3.mp3"></audio>
+    <audio id="A3s" src="/notes/A3s.mp3"></audio>
+    <audio id="B3" src="/notes/B3.mp3"></audio>
     
+    <div class="copyright">
+        <p>&copy; 2020 Venika Gaur
+        </div>
 </body>
 </html>
