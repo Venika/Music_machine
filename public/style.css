@@ -1,0 +1,94 @@
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+
+body{
+    background: coral;
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano{
+    display: flex;
+}
+
+
+.white{
+    width: 62px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+}
+
+.white h2{
+    text-align: center;
+    margin-top: 250px;
+}
+
+.white.active{
+    background-color: #dadada;
+}
+
+.black{
+    width: 36px;
+    height: 170px;
+    background-color: black;
+    margin-left: -18px;
+    margin-right: -18px;
+    z-index: 2;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.black h2{
+    font-size: larger;
+    text-align: center;
+    color: white;
+    margin-top: 130px;
+}
+
+.black.active{
+    background-color: #3a3737;
+}
+
+
+.buttons{
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 2rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    color: inherit;
+}
+
+.btn:first-child{
+    margin-left: 0;
+}
+
+.recordBtn{
+    color: rgb(0, 0, 0);
+}
+
+.recordBtn.active{
+    background-color: red;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: rgb(185, 129, 129);
+}
