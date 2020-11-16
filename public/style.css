@@ -238,3 +238,28 @@ body{
     }
 
 }
+
+@media only screen and (max-width: 768px){
+    .white{
+        width: 40px;
+        height: 200px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .black{
+        width: 32px;
+        height: 130px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .black h2{
+        margin-top: 100px;
+    }
+
+    .white h2{
+        margin-top: 150px;
+    }
+
+}
