@@ -1,12 +1,20 @@
+
 *, *::before, *::after {
     box-sizing:border-box;
     
+}
+
+.fab{
+    color: white;
+    padding-left: 20px;
+    font-size: 20px;
 }
 
 body{
     font-size: large;
     background: #8FCB9B;
     margin:0;
+    max-width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -148,4 +156,85 @@ body{
 
 .songLink{
     margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+	.C1{
+    display: none;
+    }
+    
+    .C1s{
+        display: none;
+    }
+    
+    .D1{
+        display: none;
+    }
+    
+    .D1s{
+        display: none;
+    }
+
+    .E1{
+        display: none;
+    }
+
+    .F1{
+        display: none;
+    }
+
+    .F1s{
+        display: none;
+    }
+
+    .G1{
+        display: none;
+    }
+
+    .G1s{
+        display: none;
+    }
+
+    .A2{
+        display: none;
+    }
+
+    .A2s{
+        display: none;
+    }
+
+    .B2{
+        display: none;
+    }
+
+
+
+    .white{
+        width: 48px;
+        height: 200px;
+    }
+
+    .black{
+        width: 40px;
+        height: 130px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .black h2{
+        margin-top: 100px;
+    }
+
+    .white h2{
+        margin-top: 150px;
+    }
+
+    .btn{
+        font-size: 1.5rem;
+    }
+
+    .heading h1{
+        font-size: 35px;
+    }
+
 }
