@@ -5,8 +5,7 @@ Music Machine allows users to play Piano from the comfort of their 'keyboard'. U
 I started with building a simple piano model in HTML and CSS and added the music tunes by using Javascript to map keys. Next, I decided to add the functionality of letting users store the tunes that they make by using Express JS and Mongo DB to create the backend for the project. After that, I decided to move the database from my local machine to the cloud by using Google Cloud services.
 
 # Demo
-To try the piano, just visit this link- https://music-machine-11-15.uc.r.appspot.com/
-
+To try the piano, just visit this link- https://music--machine.herokuapp.com/
 # Screenshots
 <img src="images/SS1.png" width="850" />  
        
@@ -16,6 +15,10 @@ To try the piano, just visit this link- https://music-machine-11-15.uc.r.appspot
 # Future updates
 I would like to add more instruments to the music machine. Perhaps, a feature that will allow users to switch between different instruments while composing. Also, the functionality of creating a user account and store the composed melodies.
 
+# Changes
+I moved the application from Google Cloud to Heroku with MongoDB Atlas because I ran out of credit on my GC.
+
 # Helpful links
 - https://cloud.google.com/sdk/docs/install
 - https://docs.mongodb.com/guides/
+- https://developer.mongodb.com/how-to/use-atlas-on-heroku
