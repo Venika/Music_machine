@@ -13,7 +13,7 @@ const host = nconf.get('mongoHost');
 
 let uri = `mongodb+srv://${user}:${pass}@${host}`;
 
-mongoose.connect(uri, {
+mongoose.connect(process.env.MONGODB_URI ||uri, {
     useNewUrlParser: true, useUnifiedTopology: true
 })
 
